@@ -1,3 +1,4 @@
+// import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import planetData from '../../helpers/data/planetData';
 import './planetCard.scss';
