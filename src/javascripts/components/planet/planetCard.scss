@@ -1,8 +1,11 @@
 .card {
-  margin: 10px 0;
+  background-color: black;
+  color: wheat;
+  margin: 1rem;
+  height: 20rem;
+  width: 20rem;
 
-  .card-body {
-    width: 200px;
-    height: 200px;  
-  }
+  img {
+    width: 90%;
+  };
 }
