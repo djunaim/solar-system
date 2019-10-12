@@ -32,7 +32,7 @@ const hideInfo = () => {
 };
 
 const hoverName = (e) => {
-  $(e.target).find('#h4').toggleClass('d-none');
+  $(e.target).find('h4').toggleClass('d-none');
 };
 
 const hideName = () => {
