@@ -47,17 +47,6 @@ const showImg = () => {
   $('.card').hover(hoverImg);
 };
 
-// const results = () => {
-//   $('#planetSearch').on('keyup', () => {
-//     const input = $(this).val().toLowerCase();
-//     $('#planetarium').filter((word) => {
-//       if (input.indexOf(word.toLowerCase) !== -1) {
-//         planetCard();
-//       }
-//     });
-//   });
-// };
-
 const hoverEvent = () => {
   hideName();
   showImg();
