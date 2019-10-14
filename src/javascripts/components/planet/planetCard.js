@@ -11,7 +11,7 @@ const planetCard = () => {
     domString += `
       <div class="col-4">
         <div class="card">
-        <h4 id="planetName" class="d-flex justify-content-center">${planet.name}</h4>
+        <h4 class="d-flex justify-content-center planetName">${planet.name}</h4>
             <div class="card-body">
               <img src="${planet.imageUrl}" class="card-img-top d-none">
               <p class="card-text">${planet.description}</p>
