@@ -7,7 +7,7 @@ const init = () => {
   planetCard.planetCard();
   planetCard.hideInfo();
   planetCard.hoverEvent();
-  click.attachEvent();
+  click.singleCardClick();
 };
 
 init();
