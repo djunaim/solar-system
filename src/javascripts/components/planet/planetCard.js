@@ -32,7 +32,7 @@ const hideInfo = () => {
 };
 
 const hoverName = (e) => {
-  $(e.target).find('#h4').toggleClass('d-none');
+  $(e.target).find('h4').toggleClass('d-none');
 };
 
 const hideName = () => {
@@ -46,17 +46,6 @@ const hoverImg = (e) => {
 const showImg = () => {
   $('.card').hover(hoverImg);
 };
-
-// const results = () => {
-//   $('#planetSearch').on('keyup', () => {
-//     const input = $(this).val().toLowerCase();
-//     $('#planetarium').filter((word) => {
-//       if (input.indexOf(word.toLowerCase) !== -1) {
-//         planetCard();
-//       }
-//     });
-//   });
-// };
 
 const hoverEvent = () => {
   hideName();
