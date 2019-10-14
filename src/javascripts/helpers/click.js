@@ -3,10 +3,12 @@ import planetCard from '../components/planet/planetCard';
 import planetData from './data/planetData';
 import utilities from './utilities';
 
-const cardClick = () => {
-  planetCard.planetCard();
-  const allPlanets = planetData.getPlanet();
+planetCard.planetCard();
+const allPlanets = planetData.getPlanet();
+
+const cardsClick = () => {
   const cardGroup = $('.card');
+  console.log(cardGroup);
   for (let i = 0; i < cardGroup.length; i += 1) {
     const singleCard = cardGroup[i];
     const planetID = $('.card').find('.planetName').html();
@@ -16,7 +18,7 @@ const cardClick = () => {
       console.log(singlePlanet);
       const cardName = cardGroup.find('.planetName').html();
       console.log(cardName);
-      if (planetID === singlePlanet.name) {
+      if ( === singlePlanet.name) {
         utilities.printToDOM('planetarium', singleCard);
       // } else if (planetID !== singlePlanet.name) {
       //   singleCard.hide();
@@ -25,8 +27,15 @@ const cardClick = () => {
   }
 };
 
+// const singleCardClick = () => {
+//   $('.card').click((e) => {
+//     const cardID = e.target.id;
+//     cardsClick(cardID);
+//   });
+// };
+
 const attachEvent = () => {
-  $(document).on('click', '.card', cardClick);
+  $(document).on('click', '.card', cardsClick);
 };
 
 export default { attachEvent };
