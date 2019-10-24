@@ -52,4 +52,8 @@ const hoverEvent = () => {
   showImg();
 };
 
+// const attachEvent = () => {
+//   $(document).on('click', '.card', cardsClick);
+// };
+
 export default { planetCard, hideInfo, hoverEvent };
