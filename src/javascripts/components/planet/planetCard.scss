@@ -5,7 +5,20 @@
   height: 20rem;
   width: 20rem;
 
-  img {
-    width: 90%;
+  .card-img-top {
+    width: 100%;
+    
+    img {
+    width: 100%;
+    }
   };
+
+  h4 {
+    display: flex;
+    justify-content: center;
+    // position: absolute;
+    // top: 40%;
+    // left: 40%;
+  }
+
 }

@@ -10,9 +10,9 @@ const planetCard = () => {
     const planet = planets[i];
     domString += `
       <div class="col-4">
-        <div class="card">
-        <h4 class="d-flex justify-content-center planetName">${planet.name}</h4>
+        <div class="card" id=${planet.name}>
             <div class="card-body">
+              <h4 class="planetName">${planet.name}</h4>
               <img src="${planet.imageUrl}" class="card-img-top d-none">
               <p class="card-text">${planet.description}</p>
               <p class="card-text">${planet.isGasPlanet}</p>
@@ -32,11 +32,11 @@ const hideInfo = () => {
 };
 
 const hoverName = (e) => {
-  $(e.target).find('h4').toggleClass('d-none');
+  $(e.target).find('.planetName').toggleClass('d-none');
 };
 
 const hideName = () => {
-  $('.card').hover(hoverName);
+  $('.card-body').hover(hoverName);
 };
 
 const hoverImg = (e) => {
@@ -44,12 +44,16 @@ const hoverImg = (e) => {
 };
 
 const showImg = () => {
-  $('.card').hover(hoverImg);
+  $('.card-body').hover(hoverImg);
 };
 
 const hoverEvent = () => {
   hideName();
   showImg();
 };
+
+// const attachEvent = () => {
+//   $(document).on('click', '.card', cardsClick);
+// };
 
 export default { planetCard, hideInfo, hoverEvent };

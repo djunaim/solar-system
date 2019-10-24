@@ -3,30 +3,29 @@ import planetCard from '../components/planet/planetCard';
 import planetData from './data/planetData';
 import utilities from './utilities';
 
-const cardClick = () => {
-  planetCard.planetCard();
+const cardsClick = () => {
   const allPlanets = planetData.getPlanet();
-  const cardGroup = $('.card');
-  for (let i = 0; i < cardGroup.length; i += 1) {
-    const singleCard = cardGroup[i];
-    const planetID = $('.card').find('.planetName').html();
-    console.log(planetID);
-    for (let j = 0; j < allPlanets.length; j += 1) {
-      const singlePlanet = allPlanets[j];
-      console.log(singlePlanet);
-      const cardName = cardGroup.find('.planetName').html();
-      console.log(cardName);
-      if (planetID === singlePlanet.name) {
-        utilities.printToDOM('planetarium', singleCard);
+  for (let i = 0; i < allPlanets.length; i += 1) {
+    const singlePlanet = allPlanets[i];
+    const planetID = $('.card');
+    if ($(planetID).find('h4').html() === singlePlanet.name) {
+      console.log($(planetID).find('h4').html());
+      utilities.printToDOM('planetarium', '');
+      planetCard.planetCard(singlePlanet);
       // } else if (planetID !== singlePlanet.name) {
       //   singleCard.hide();
-      }
+      // }
     }
   }
 };
 
 const attachEvent = () => {
-  $(document).on('click', '.card', cardClick);
+  const allCards = $('.card');
+  for (let j = 0; j < allCards.length; j += 1) {
+    const singleCard = allCards[j];
+    console.log(singleCard);
+    $(singleCard).click(cardsClick);
+  }
 };
 
 export default { attachEvent };
