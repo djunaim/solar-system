@@ -8,8 +8,8 @@ const cardsClick = () => {
   for (let i = 0; i < allPlanets.length; i += 1) {
     const singlePlanet = allPlanets[i];
     const planetID = $('.card');
-    if ($(planetID).find('h4').html() === singlePlanet.name) {
-      console.log($(planetID).find('h4').html());
+    if ($(planetID).closest('div.card').attr('id') === singlePlanet.name) {
+      console.log($(planetID).closest('div.card').attr('id'));
       utilities.printToDOM('planetarium', '');
       planetCard.planetCard(singlePlanet);
       // } else if (planetID !== singlePlanet.name) {
