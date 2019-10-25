@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 const results = () => {
   $('#planetSearch').on('keyup', () => {
-    const input = $(this).val();
+    const input = $(this).val().toLowerCase();
     $('.card').hide();
     $(`.card:contains(${input})`).show();
   });
