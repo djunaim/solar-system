@@ -3,6 +3,7 @@ import 'bootstrap';
 import planetCard from './components/planet/planetCard';
 import click from './helpers/click';
 import planetData from './helpers/data/planetData';
+import search from './helpers/search';
 
 const init = () => {
   const planets = planetData.getPlanet();
@@ -10,6 +11,7 @@ const init = () => {
   planetCard.hideInfo();
   planetCard.hoverEvent();
   click.attachEvent();
+  search.results();
 };
 
 init();

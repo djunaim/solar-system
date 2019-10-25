@@ -1,18 +1,13 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 // import planetData from './data/planetData';
 // import utilities from './utilities';
 
-// const results = () => {
-//   $('#planetSearch').on('keyup', () => {
-//     const newPlanets = '';
-//     const input = $(this).val().toLowerCase();
-//     $('#planetarium').filter((word) => {
-//       if (planetData.planetData().indexOf(word.toLowerCase) === input) {
-//         newPlanets.push();
-//         utilities.printToDOM('planetarium', newPlanets);
-//       }
-//     });
-//   });
-// };
+const results = () => {
+  $('#planetSearch').on('keyup', () => {
+    const input = $(this).val();
+    $('.card').hide();
+    $(`.card:contains(${input})`).show();
+  });
+};
 
-// export default { results };
+export default { results };

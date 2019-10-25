@@ -9,7 +9,7 @@ const planetCard = () => {
   for (let i = 0; i < planets.length; i += 1) {
     const planet = planets[i];
     domString += `
-      <div class="col-4">
+      <div class="col">
         <div class="card" id=${planet.name}>
             <div class="card-body">
               <h4 class="planetName">${planet.name}</h4>
