@@ -67,4 +67,6 @@ const planetData = [
 
 const getPlanet = () => planetData;
 
+// const getSinglePlanet = (planet) => planetData.filter(p => p.name === planet.name);
+
 export default { getPlanet };
