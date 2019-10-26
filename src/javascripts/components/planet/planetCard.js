@@ -1,23 +1,21 @@
 import $ from 'jquery';
 import utilities from '../../helpers/utilities';
-import planetData from '../../helpers/data/planetData';
 import './planetCard.scss';
 
-const planetCard = () => {
+const planetCard = (arr) => {
   let domString = '<div class="row">';
-  const planets = planetData.getPlanet();
-  for (let i = 0; i < planets.length; i += 1) {
-    const planet = planets[i];
+  for (let i = 0; i < arr.length; i += 1) {
+    const singleArr = arr[i];
     domString += `
-      <div class="col-4">
-        <div class="card" id=${planet.name}>
+      <div class="col">
+        <div class="card" id=${singleArr.name}>
             <div class="card-body">
-              <h4 class="planetName">${planet.name}</h4>
-              <img src="${planet.imageUrl}" class="card-img-top d-none">
-              <p class="card-text">${planet.description}</p>
-              <p class="card-text">${planet.isGasPlanet}</p>
-              <p class="card-text">${planet.numberOfMoons}</p>
-              <p class="card-text">${planet.nameOfLargestMoon}</p>
+              <h4 class="planetName">${singleArr.name}</h4>
+              <img src="${singleArr.imageUrl}" class="card-img-top d-none">
+              <p class="card-text">${singleArr.description}</p>
+              <p class="card-text">${singleArr.isGasPlanet}</p>
+              <p class="card-text">${singleArr.numberOfMoons}</p>
+              <p class="card-text">${singleArr.nameOfLargestMoon}</p>
             </div>
         </div> 
       </div>   
