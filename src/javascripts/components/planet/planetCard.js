@@ -10,7 +10,7 @@ const planetCard = (arr) => {
       <div class="col">
         <div class="card" id=${singleArr.name}>
             <div class="card-body">
-              <h4 class="planetName">${singleArr.name}</h4>
+              <h4 class="planetName">${singleArr.name} <span class="close d-none">x<span> </h4>
               <img src="${singleArr.imageUrl}" class="card-img-top d-none">
               <p class="card-text">${singleArr.description}</p>
               <p class="card-text">${singleArr.isGasPlanet}</p>
