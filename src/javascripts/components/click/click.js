@@ -1,8 +1,19 @@
 import $ from 'jquery';
 import planetCard from '../planet/planetCard';
 import planetData from '../../helpers/data/planetData';
-// import utilities from './utilities';
+import './click.scss';
 
+const buttonClick = () => {
+  const planets = planetData.getPlanet();
+  $(document).click((e) => {
+    const buttonID = e.target.id;
+    if (buttonID === 'closeButton') {
+      planetCard.planetCard(planets);
+      planetCard.hideInfo();
+      planetCard.hoverEvent();
+    }
+  });
+};
 
 const showButton = () => {
   $('.card').find('.close').toggleClass('d-none');
@@ -16,6 +27,7 @@ const cardsClick = (e) => {
     if (selectedId === singlePlanet.name) {
       planetCard.planetCard([singlePlanet]);
       showButton();
+      buttonClick();
     }
   }
 };
@@ -24,7 +36,6 @@ const attachEvent = () => {
   const allCards = $('.card');
   for (let j = 0; j < allCards.length; j += 1) {
     const singleCard = allCards[j];
-    console.log(singleCard);
     $(singleCard).click(cardsClick);
   }
 };

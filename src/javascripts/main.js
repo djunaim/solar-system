@@ -1,7 +1,7 @@
 import '../styles/main.scss';
 import 'bootstrap';
 import planetCard from './components/planet/planetCard';
-import click from './helpers/click';
+import click from './components/click/click';
 import planetData from './helpers/data/planetData';
 import search from './helpers/search';
 
