@@ -19,6 +19,14 @@ const showButton = () => {
   $('.card').find('.close').toggleClass('d-none');
 };
 
+const showImg = () => {
+  $('.card').find('img').toggleClass('d-none');
+};
+
+const cardSize = () => {
+  $('.card').toggleClass('w-100');
+};
+
 const cardsClick = () => {
   $(document).click((e) => {
     const selectedId = $(e.target).closest('.card').attr('id');
@@ -27,6 +35,8 @@ const cardsClick = () => {
       const singlePlanet = allPlanets[i];
       if (selectedId === singlePlanet.name) {
         planetCard.planetCard([singlePlanet]);
+        cardSize();
+        showImg();
         showButton();
         buttonClick();
       }

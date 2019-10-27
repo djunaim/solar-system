@@ -13,9 +13,6 @@ const planetCard = (arr) => {
               <h4 class="planetName">${singleArr.name} <span class="close d-none"><button class="closeButton">x</button><span> </h4>
               <img src="${singleArr.imageUrl}" class="card-img-top d-none">
               <p class="card-text">${singleArr.description}</p>
-              <p class="card-text">${singleArr.isGasPlanet}</p>
-              <p class="card-text">${singleArr.numberOfMoons}</p>
-              <p class="card-text">${singleArr.nameOfLargestMoon}</p>
             </div>
         </div> 
       </div>   
@@ -34,7 +31,7 @@ const hoverName = (e) => {
 };
 
 const hideName = () => {
-  $('.card-body').hover(hoverName);
+  $('.card').hover(hoverName);
 };
 
 const hoverImg = (e) => {
@@ -42,7 +39,7 @@ const hoverImg = (e) => {
 };
 
 const showImg = () => {
-  $('.card-body').hover(hoverImg);
+  $('.card').hover(hoverImg);
 };
 
 const hoverEvent = () => {
